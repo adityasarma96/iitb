@@ -1,0 +1,72 @@
+1. mail.google.com/#<a>
+a) #inbox, #starred, #imp, #sent
+   #category/promotions, /socail, /updates, /forums
+   
+
+-----------------------------------------------------
+Mailme Database:
+
+Users - 
+	userid (primary key)
+	mailid
+	pwd
+
+Profile -
+	userid	(foreign key)
+	name
+	age
+	gender
+	phone
+	
+Message - 
+	msgid	 	  String 	  (primary key)
+	from	 	  String 	  (mailme_id)
+	to		 	  [String]    		"
+	cc		 	  [String]			"
+	bcc		  	  [String]			"
+	subject	      String
+	message_data  String
+	time		  
+
+Inbox -
+	userid	(foreign key)
+	msgid	(foreign key)
+	reply_msgid		// child messages to original message
+	senderid
+	isread
+	important
+	starred
+	
+Sentbox -
+	userid	(foreign key)
+	msgid	(foreign key)
+	reply_msgid
+	receiverid
+	important
+	starred
+	
+
+Mail Me -
+
+1. Unique mailme_id									// basic requirement
+2. Meaaging between single & multiusers				// from, to data in database
+3. CC BCC formats available							// array of mailme_id's to send the message
+4. Reply to/ Forward any Message					// new_msg (replied messages are childs to original message)
+5. Mark any conversation important and(or) star		// bool value in database
+6. Delete any conversation							// drop document (row) from database tables ( automatically deletes child <replied> messages
+
+LATER :-)
+/*
+
+7. Unsent Messages will be saved in Draft !!
+
+Drafts -
+	userid
+	to
+	cc
+	bcc
+	subject
+	message_data
+	time
+	
+*/

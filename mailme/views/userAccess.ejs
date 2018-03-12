@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>User Access</title>
+</head>
+<body>
+<h1>Sign In</h1>
+<form action="/signin" method="post">
+	mailme@  <input type="text" name="mailmeid"><br><br>
+	password <input type="password" name="password"><br><br>
+	<input type="submit" value="Login">
+	<input type="reset" value="Reset"><br><br>
+</form>
+<h1>Register</h1>
+<form action="/signup" method="post">
+	Name  <input type="text" name="name"><br><br>
+	Age		  <input type="number" name="age"><br><br>
+	Gender    <input type="radio" name="gender" value="Male">Male
+			   <input type="radio" name="gender" value="Male">Female<br><br>
+	Phonenum <input type="tel" name="phoneNumber"><br><br>
+	mailme@  <input type="text" name="mailmeid"><br><br>
+	password <input type="password" name="password"><br><br>
+	<input type="submit" value="Register">
+	<input type="reset" value="Reset">
+</form>
+</body>
+</html>

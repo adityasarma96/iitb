@@ -1,0 +1,32 @@
+html, body {
+    margin: 0; 
+    height: 100%; 
+    overflow: hidden
+}
+
+#content {
+    overflow: hidden;
+}
+
+#mailLinks {
+    float: left;
+    width: 15%;
+    height: 800px;
+    font-family: Raleway;
+    background-color: white;
+    text-align: center;
+}
+
+#mails{
+    float: right;
+    width: 85%;
+    height: 750px;
+    background-color: grey;
+    overflow:auto;
+}
+.btn-info {
+    text-align: center;
+    width: 100px;
+    margin:0 auto;
+    display:block;
+}

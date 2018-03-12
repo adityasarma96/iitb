@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Compose</title>
+</head>
+<body>
+<form method="post" action="/compose">
+	mailme@<input type="text" name="to"><br><br>
+	Subject : <textarea name="subject" style="height:20px;width: 500px;"></textarea>
+		<br><br>
+	Message <textarea name="message" style="height:200px;width: 500px;"></textarea>
+		<br><br>
+		<input type="hidden" name="from" value="<%= user.mailmeid %>">
+		<input type="hidden" name="isread" value="false">
+		<input type="hidden" name="important" value="false">
+		<input type="hidden" name="starred" value="false">
+	<input type="submit">
+
+</form>
+</body>
+</html>
